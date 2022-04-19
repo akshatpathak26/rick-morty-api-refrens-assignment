@@ -2,9 +2,9 @@ import React from 'react'
 import './card.css'
 import Api from './../../api/api'
 
-function Card(props) {
+const Card = (props) => {
 
-  function handlerCard(id) {
+  const handlerCard = (id) => {
     Api.getCharacterById(id).then((data) => {
       props.onClick(data)
     })

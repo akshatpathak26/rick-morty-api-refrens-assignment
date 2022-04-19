@@ -1,12 +1,15 @@
-async function getAllCharacters() {
+
+
+const getAllCharacters = async () =>{
     const response = await fetch('https://rickandmortyapi.com/api/character/');
     return response.json();
-}
-
-async function getCharacterById(id) {
-    const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+} 
+const getCharacterById = async (id) =>{
+    const response  = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
     return response.json();
-}
+} 
+
+
 
 
 export default {

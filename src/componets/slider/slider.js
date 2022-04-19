@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './slider.css'
 import Card from './../card/card'
 
-function Slider(props) {
+const Slider = (props)  => {
     
   const [position, setPosition] = useState(0)
   const {items, onClick} = props
@@ -14,10 +14,10 @@ function Slider(props) {
       onClick={onClick} />
   );
 
-  function handlerSliderArrow(arrow) {
+  const handlerSliderArrow=(arrow) => {
     const lastIndex = items.length - 1
     const listCard = document.querySelectorAll('.Card')
-    let index = null;
+    let index = 0;
     
     if(arrow !== 1) {
         index = (position === 0) ? lastIndex : position - 1;

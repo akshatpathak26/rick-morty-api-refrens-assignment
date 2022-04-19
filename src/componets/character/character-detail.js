@@ -1,11 +1,13 @@
 import React from 'react'
 import './character-detail.css'
 
-function CharacterDetail(props) {
+const CharacterDetail = (props) => {
 
   const {characterDetail} = props
+  console.log(props);
 
-  function handlerClose() {
+  
+  const handlerClose = () => {
     props.onClick()
   }
 
@@ -19,11 +21,11 @@ function CharacterDetail(props) {
         <div className="Character-information">
           <div className="Character-information-content">
             <h2>{characterDetail.name}</h2>
-            <p><b>Estado:</b> {characterDetail.status}</p>
-            <p><b>Especie:</b> {characterDetail.species}</p>
-            <p><b>Género:</b> {characterDetail.gender}</p>
-            <p><b>Origen:</b> {characterDetail.origin.name}</p>
-            <p><b>Ubicación:</b> {characterDetail.location.name}</p>
+            <p><b>Status:</b> {characterDetail.status}</p>
+            <p><b>Species:</b> {characterDetail.species}</p>
+            <p><b>Gender:</b> {characterDetail.gender}</p>
+            <p><b>Origin:</b> {characterDetail.origin.name}</p>
+            <p><b>Location:</b> {characterDetail.location.name}</p>
           </div>
         </div>
       </div>

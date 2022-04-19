@@ -22,13 +22,13 @@ function App() {
     })
   })
 
-  function showCharacterDetail(data) {
+  const showCharacterDetail = (data)  => {
     setCharacterDetail(data)
     //setShowSlider(false)
     setShowDetail(true)
   }
 
-  function closeCharacterDetail() {
+  const closeCharacterDetail =() =>{
     setCharacterDetail({})
     setShowDetail(false)
     //setShowSlider(true)
